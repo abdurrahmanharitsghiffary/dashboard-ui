@@ -1,0 +1,20 @@
+{
+  "tableName": "tb_ep_customers",
+  "modelName": "Customer",
+  "columns": [
+    {
+      "colName": "tb_ep_customerId",
+      "modColName": "id",
+      "modTData": "String",
+      "colTData": "UUID",
+      "isPrimaryKey": true
+    },
+    {
+      "colName": "tb_ep_customerName",
+      "modColName": "customerName",
+      "modTData": "String",
+      "colTData": "VARCHAR(0,100)",
+      "isPrimaryKey": true
+    }
+  ]
+}

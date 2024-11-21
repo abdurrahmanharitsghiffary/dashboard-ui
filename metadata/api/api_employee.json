@@ -1,0 +1,56 @@
+{
+  "version": "v1",
+  "modelName": "Employee",
+  "modelPrimaryColumn": "id",
+  "columns": [
+    {
+      "colName": "id",
+      "colModelName": "id",
+      "colModelType": "String",
+      "colType": "string",
+      "formType": "NONE"
+    },
+    {
+      "colName": "name",
+      "colModelName": "name",
+      "colModelType": "String",
+      "colType": "string",
+      "formType": "INPUT",
+      "zodChainValidation": ["string", "min:2"]
+    },
+    {
+      "colName": "country",
+      "colModelName": "country",
+      "colModelType": "String",
+      "colType": "string",
+      "formType": "SELECT",
+      "selectOptions": ["USA", "ID", "ENG"],
+      "zodChainValidation": ["enum:USA,ID,ENG"]
+    },
+    {
+      "colName": "email",
+      "colModelName": "email",
+      "colModelType": "String",
+      "colType": "string",
+      "formType": "INPUT",
+      "zodChainValidation": ["string", "email"]
+    },
+    {
+      "colName": "company",
+      "colModelName": "company",
+      "colModelType": "String",
+      "colType": "string",
+      "formType": "INPUT",
+      "zodChainValidation": ["string", "min:2"]
+    },
+    {
+      "colName": "gender",
+      "colModelName": "gender",
+      "colModelType": "String",
+      "colType": "string",
+      "formType": "SELECT",
+      "selectOptions": ["MALE", "FEMALE"],
+      "zodChainValidation": ["enum:MALE,FEMALE"]
+    }
+  ]
+}

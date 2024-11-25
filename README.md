@@ -1,66 +1,112 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/9113740/201498864-2a900c64-d88f-4ed4-b5cf-770bcb57e1f5.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/9113740/201498152-b171abb8-9225-487a-821c-6ff49ee48579.png">
-</picture>
+# Project Structure Guidelines
 
-<div align="center"><strong>Next.js 14 Admin Dashboard Starter Template With Shadcn-ui</strong></div>
-<div align="center">Built with the Next.js App Router</div>
-<br />
-<div align="center">
-<a href="https://next-shadcn-dashboard-starter.vercel.app">View Demo</a>
-<span>
-</div>
+This document outlines the conventions and best practices for the project structure and code style. Follow these guidelines strictly to ensure consistency, readability, and maintainability across the codebase. Make sure you read all the important articles listed in the **Important Reading Resources** section below.
 
-## Overview
+## Naming Conventions
 
-This is a starter template using the following stack:
+- **PascalCase**:
 
-- Framework - [Next.js 14](https://nextjs.org/13)
-- Language - [TypeScript](https://www.typescriptlang.org)
-- Styling - [Tailwind CSS](https://tailwindcss.com)
-- Components - [Shadcn-ui](https://ui.shadcn.com)
-- Schema Validations - [Zod](https://zod.dev)
-- State Management - [Zustand](https://zustand-demo.pmnd.rs)
-- Search params state manager - [Nuqs](https://nuqs.47ng.com/)
-- Auth - [Auth.js](https://authjs.dev/)
-- Tables - [Tanstack Tables](https://ui.shadcn.com/docs/components/data-table)
-- Forms - [React Hook Form](https://ui.shadcn.com/docs/components/form)
-- Command+k interface - [kbar](https://kbar.vercel.app/)
-- Linting - [ESLint](https://eslint.org)
-- Pre-commit Hooks - [Husky](https://typicode.github.io/husky/)
-- Formatting - [Prettier](https://prettier.io)
+  - Used for interfaces and components.
+  - Example: `UserProfile`, `ComponentProps`.
 
-_If you are looking for a React admin dashboard starter, here is the [repo](https://github.com/Kiranism/react-shadcn-dashboard-starter)._
+- **camelCase**:
 
-## Pages
+  - Used for variables and properties.
+  - Example: `userProfile`, `isLoggedIn`.
 
-| Pages                                                                                   | Specifications                                                                                                                      |
-| :-------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| [Signup](https://next-shadcn-dashboard-starter.vercel.app/)                             | Authentication with **NextAuth** supports Social logins and email logins (Enter dummy email for demo).                              |
-| [Dashboard](https://next-shadcn-dashboard-starter.vercel.app/dashboard)                 | Cards with recharts graphs for analytics.                                                                                           |
-| [Employee](https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee)         | Tanstack tables with server side searching, filter, pagination by Nuqs which is a Type-safe search params state manager in nextjs). |
-| [Employee/new](https://next-shadcn-dashboard-starter.vercel.app/dashboard/employee/new) | A Employee Form with shadcn form (react-hook-form + zod).                                                                           |
-| [Product](https://next-shadcn-dashboard-starter.vercel.app/dashboard/product)           | Tanstack tables with server side searching, filter, pagination by Nuqs which is a Type-safe search params state manager in nextjs   |
-| [Product/new](https://next-shadcn-dashboard-starter.vercel.app/dashboard/product/new)   | A Product Form with shadcn form (react-hook-form + zod).                                                                            |
-| [Profile](https://next-shadcn-dashboard-starter.vercel.app/dashboard/profile)           | Mutistep dynamic forms using react-hook-form and zod for form validation.                                                           |
-| [Kanban Board](https://next-shadcn-dashboard-starter.vercel.app/dashboard/kanban)       | A Drag n Drop task management board with dnd-kit and zustand to persist state locally.                                              |
-| [Not Found](https://next-shadcn-dashboard-starter.vercel.app/dashboard/notfound)        | Not Found Page Added in the root level                                                                                              |
-| -                                                                                       | -                                                                                                                                   |
+- **UPPER_CASE**:
 
-## Getting Started
+  - Used for constant variables.
+  - Example: `API_URL`, `MAX_RETRIES`.
 
-Follow these steps to clone the repository and start the development server:
+- **kebab-case**:
+  - Used for file names.
+  - Example: `user-profile.tsx`, `auth-context.ts`.
 
-- `git clone https://github.com/Kiranism/next-shadcn-dashboard-starter.git`
-- `npm install`
-- Create a `.env.local` file by copying the example environment file:
-  `cp env.example.txt .env.local`
-- Add the required environment variables to the `.env.local` file.
-- `npm run dev`
+## File Extensions
 
-You should now be able to access the application at http://localhost:3000.
+- **`.ts`**:
 
-> [!WARNING]  
-> After cloning or forking the repository, be cautious when pulling or syncing with the latest changes, as this may result in breaking conflicts.
+  - Used for custom hooks and other files that are not components.
+  - Example: `useAuth.ts`.
 
-Cheers! 🥂
+- **`.tsx`**:
+  - Used for React components.
+  - Example: `UserProfile.tsx`.
+
+## Component Guidelines
+
+1. **Use the `function` keyword for components**:
+
+   - **Good** ✅:
+     ```javascript
+     function MyComponent() {
+       return 'MyComponent';
+     }
+     ```
+   - **Bad** ❌:
+     ```javascript
+     const MyComponent = () => 'MyComponent';
+     ```
+
+2. **Conditional rendering**:
+
+   - Avoid using `isTrue && <SomeComponent />`.
+   - Use `isTrue ? <SomeComponent /> : null` for better clarity.
+
+3. **Props interface**:
+
+   - Always define props using an interface with a `Props` suffix.
+   - Example:
+     ```typescript
+     interface UserProfileProps {
+       name: string;
+       age: number;
+     }
+     ```
+
+4. **Export naming**:
+   - The name of a default export must match the file name.
+   - Example:
+     - File: `listing-page.tsx`
+     - Component: `export default function ListingPage() {}`
+
+## Metadata Declaration
+
+- Always explicitly declare metadata types for pages.
+
+  - Example:
+    ```typescript
+    export const metadata: Metadata = {
+      title: 'My Page',
+      description: 'This is my page',
+    };
+    ```
+
+## Custom Hooks
+
+- Never use default exports for custom hooks.
+- Example:
+
+  - **Bad** ❌:
+    ```javascript
+    export default function useAuth() {}
+    ```
+  - **Good** ✅:
+    ```typescript
+    export function useAuth() {
+      // logic
+    }
+    ```
+
+## Important Reading Resources
+
+- [Project Structure](https://github.com/alan2207/bulletproof-react)
+- [Conventional Commit Cheatsheet](https://gist.github.com/Zekfad/f51cb06ac76e2457f11c80ed705c95a3)
+- [Naming Cheatsheet](https://github.com/kettanaito/naming-cheatsheet)
+- [Tao Of React](https://alexkondov.com/tao-of-react)
+- [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+
+### Final Reminder
+
+📝 **Reading and understanding these guidelines is crucial before starting your work. It's better to follow them from the beginning rather than fixing mistakes later as pointed out by your code reviewer!** 🤣

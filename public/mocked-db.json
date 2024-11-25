@@ -1,0 +1,104 @@
+{
+  "employee": [
+    {
+      "id": "-oWMKT-AHq6QnH2wVgZr-",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505831675,
+      "updatedAt": 1732505831675
+    },
+    {
+      "id": "YhHY7TJQ7jwSiYGhNOSqt",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505838711,
+      "updatedAt": 1732505838711
+    },
+    {
+      "id": "ryaa6QACs7WfIk8hKPInE",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505839466,
+      "updatedAt": 1732505839466
+    },
+    {
+      "id": "1aRIDnxvkFyv4GCvuYzkA",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505839865,
+      "updatedAt": 1732505839865
+    },
+    {
+      "id": "y1SblYWRM1A0b8R7CiXBH",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505840270,
+      "updatedAt": 1732505840270
+    },
+    {
+      "id": "ckK4Y902DSndxtVUuuqCK",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505840491,
+      "updatedAt": 1732505840491
+    },
+    {
+      "id": "2nxDUz7NBI-mihhT528fG",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505840611,
+      "updatedAt": 1732505840611
+    },
+    {
+      "id": "5e3siMrWoiVx2pgU4mIkZ",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505892930,
+      "updatedAt": 1732505892930
+    },
+    {
+      "id": "NpPsXXuUhqIuqpd1cFw2X",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505896391,
+      "updatedAt": 1732505896391
+    },
+    {
+      "id": "uPneDks_Mk_F-g9sVGoyJ",
+      "name": "Jamal Boolean",
+      "company": "jamalcompany",
+      "country": "ID",
+      "email": "jamalboolean@gmail.com",
+      "gender": "MALE",
+      "createdAt": 1732505898058,
+      "updatedAt": 1732505898058
+    }
+  ]
+}

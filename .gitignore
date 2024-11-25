@@ -7,13 +7,25 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/e2e/.auth/
+
+# storybook
+migration-storybook.log
+storybook.log
+storybook-static
 
 # next.js
 /.next/
 /out/
+/.vite
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store

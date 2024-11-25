@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "reactSnippets.settings.importReactOnTop": true,
+  // Do not disable or delete this settings, because i cannot found a good way to enforce rules using eslint plugin to disable relative import.
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  // Prioritize auto import from @/components/ui rather than @radix-ui
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@radix-ui",
+    "react-day-picker"
+  ],
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onType"
+}

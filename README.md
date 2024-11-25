@@ -1,6 +1,8 @@
 # Project Structure Guidelines
 
-This document outlines the conventions and best practices for the project structure and code style. Follow these guidelines strictly to ensure consistency, readability, and maintainability across the codebase. Make sure you read all the important articles listed in the **Important Reading Resources** section below.
+This document outlines the conventions and best practices for project structure and code style. Adhering to these guidelines is essential to maintain consistency, readability, and long-term maintainability across the codebase. Before starting, ensure you review the articles listed in the Important Reading Resources section below.
+
+👉 View the [Demo Website](https://dudul-dashboard-meteor.vercel.app)
 
 ## Naming Conventions
 
